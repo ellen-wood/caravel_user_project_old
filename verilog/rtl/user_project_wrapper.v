@@ -108,18 +108,18 @@ module user_project_wrapper #(
 
 
     // start of user project module instantiation
-    wrapped_counter wrapped_counter_1(
+    final_mixed_signal_top final_mixed_signal_top(
         `ifdef USE_POWER_PINS
         .vccd1 (vccd1),
         .vssd1 (vssd1),
+        .vssd1 (vcca1),
+        .vssd1 (vssa1),
         `endif
         .wb_clk_i (wb_clk_i),
         .active (active[1]),
         .io_in (io_in[37:0]),
-        .io_out (io_out[37:0]),
-        .io_oeb (io_oeb[37:0])
+        .analog_io(analog_io[10:0])
     );
-
     // end of module instantiation
 
 endmodule	// user_project_wrapper

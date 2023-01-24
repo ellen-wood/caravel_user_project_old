@@ -24,6 +24,7 @@ current_design = null
 openlane_cmd = \
 	"flow.tcl \
 	-design $$(realpath ./$*) \
+    -verbose 2 \
 	-save_path $$(realpath ..) \
 	-save \
 	-tag $(OPENLANE_RUN_TAG) \
